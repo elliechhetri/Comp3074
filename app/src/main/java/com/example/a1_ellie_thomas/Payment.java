@@ -26,4 +26,10 @@ public class Payment {
     public double calculatePay() {
         return hoursWorked * hourlyRate;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Hrs %.2f @ %.2f → %.2f",
+                hoursWorked, hourlyRate, hoursWorked * hourlyRate);
+    }
 }
