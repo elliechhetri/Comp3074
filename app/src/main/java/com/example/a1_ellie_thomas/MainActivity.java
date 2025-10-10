@@ -25,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
         etName = findViewById(R.id.etName);
         etHours = findViewById(R.id.etHours);
         etRate = findViewById(R.id.etRate);
-        tvResult = findViewById(R.id.tvResult);
+        tvResult = findViewById(R.id.tvPay);
         btnCalculate = findViewById(R.id.btnCalculate);
+
+        etHours.setFilters(new android.text.InputFilter[]{ new TwoDecimalDigitsInputFilter() });
+        etRate.setFilters(new android.text.InputFilter[]{ new TwoDecimalDigitsInputFilter() });
 
         btnCalculate.setOnClickListener(v -> calculatePay());
     }
@@ -63,5 +66,15 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private static class TwoDecimalDigitsInputFilter implements android.text.InputFilter {
+        @Override
+        public CharSequence filter(CharSequence src, int start, int end,
+                                   android.text.Spanned dst, int dstart, int dend) {
+            String newVal = dst.subSequence(0, dstart) + src.toString() + dst.subSequence(dend, dst.length());
+            if (newVal.matches("^\\d*(\\.\\d{0,2})?$")) return null;
+            return "";
+        }
     }
 }
