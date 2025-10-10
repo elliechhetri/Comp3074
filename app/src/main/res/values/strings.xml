@@ -9,4 +9,6 @@
     <string name="result_overtime">Overtime pay: —</string>
     <string name="result_total">Total pay (gross): —</string>
     <string name="result_tax">Tax (18%): —</string>
+    <string name="result_income">Total Income: —</string>
+
 </resources>

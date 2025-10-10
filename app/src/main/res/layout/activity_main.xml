@@ -63,6 +63,7 @@
             android:id="@+id/tvPay"
             android:text="@string/result_pay_base"
             android:textStyle="bold"
+            android:textSize="25sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp" />
@@ -70,20 +71,38 @@
         <TextView
             android:id="@+id/tvOvertime"
             android:text="@string/result_overtime"
+            android:textStyle="bold"
+            android:textSize="25sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
 
         <TextView
             android:id="@+id/tvTotal"
             android:text="@string/result_total"
+            android:textStyle="bold"
+            android:textSize="25sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
 
         <TextView
             android:id="@+id/tvTax"
             android:text="@string/result_tax"
+            android:textStyle="bold"
+            android:textSize="25sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tvTotalIncome"
+            android:text="@string/result_income"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
 
     </LinearLayout>
 </ScrollView>

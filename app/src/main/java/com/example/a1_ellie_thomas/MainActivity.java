@@ -1,6 +1,8 @@
 package com.example.a1_ellie_thomas;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,7 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText etName, etHours, etRate;
-    private TextView tvResult;
+    private TextView tvPay,tvOvertime, tvTotal, tvTax, tvIncome;
     private Button btnCalculate;
     private PaymentRepository repository = new PaymentRepository();
 
@@ -25,8 +27,13 @@ public class MainActivity extends AppCompatActivity {
         etName = findViewById(R.id.etName);
         etHours = findViewById(R.id.etHours);
         etRate = findViewById(R.id.etRate);
-        tvResult = findViewById(R.id.tvPay);
         btnCalculate = findViewById(R.id.btnCalculate);
+        tvPay = findViewById(R.id.tvPay);
+        tvOvertime = findViewById(R.id.tvOvertime);
+        tvTotal = findViewById(R.id.tvTotal);
+        tvTax = findViewById(R.id.tvTax);
+        tvIncome = findViewById(R.id.tvTotalIncome);
+
 
         etHours.setFilters(new android.text.InputFilter[]{ new TwoDecimalDigitsInputFilter() });
         etRate.setFilters(new android.text.InputFilter[]{ new TwoDecimalDigitsInputFilter() });
@@ -35,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("DefaultLocale")
     private void calculatePay() {
         String name = etName.getText().toString().trim();
         String hoursStr = etHours.getText().toString().trim();
@@ -47,10 +55,23 @@ public class MainActivity extends AppCompatActivity {
 
         double hours = Double.parseDouble(hoursStr);
         double rate = Double.parseDouble(rateStr);
+
         Payment payment = new Payment(name, hours, rate);
+
+        double basePay = payment.calculatePay();
+        double overTimePay = payment.calculateOverTimePay();
+        double grossPay = payment.calculateGrossPay();
+        double taxed = payment.calculateTaxed();
+        double income = payment.calculateIncome();
+
         repository.addPayment(payment);
 
-        tvResult.setText(payment.toString());
+        tvPay.setText(String.format("Base Pay:\t$%.2f", basePay));
+        tvOvertime.setText(String.format("Overtime Pay:\t$%.2f", overTimePay));
+        tvTotal.setText(String.format("Total Earned:\t$%.2f", grossPay));
+        tvTax.setText(String.format("Taxed:\t$%.2f", taxed));
+        tvIncome.setText(String.format("Total Income:\t$%.2f", income));
+
 
         android.widget.Toast.makeText(this, "Payment saved", android.widget.Toast.LENGTH_SHORT).show();
     }
