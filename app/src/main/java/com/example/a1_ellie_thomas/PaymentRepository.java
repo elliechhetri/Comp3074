@@ -11,7 +11,7 @@ public class PaymentRepository {
     }
 
     public static List<Payment> getAllPayments() {
-        return new ArrayList<>(payments);
+        return payments;
     }
 
     public static void clearPayments() {

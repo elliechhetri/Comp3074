@@ -21,6 +21,11 @@ public class DetailActivity extends AppCompatActivity {
             for (Payment p : all) sb.append(p.toString()).append("\n");
             tv.setText(sb.toString());
         }
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }
