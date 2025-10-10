@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         btnCalculate.setOnClickListener(v -> calculatePay());
 
-        //android.widget.Toast.makeText(this, "Payment saved", android.widget.Toast.LENGTH_SHORT).show();
     }
 
     private void calculatePay() {

@@ -17,4 +17,7 @@ public class PaymentRepository {
     public static void clearPayments() {
         payments.clear();
     }
+    public int size() { return payments.size(); }
+    public void clear() { payments.clear(); }
+    public Payment getLast() { return payments.isEmpty() ? null : payments.get(payments.size()-1); }
 }
