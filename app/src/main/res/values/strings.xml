@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">A1_Ellie_Thomas</string>
+    <string name="app_name">COMP 3074 A1_Ellie_Thomas</string>
+    <string name="hint_name">Employee name</string>
+    <string name="hint_hours">Number of Hours Worked</string>
+    <string name="hint_rate">Hourly rate</string>
+    <string name="btn_calculate">Calculate &amp; Save</string>
+    <string name="result_header">Result: —</string>
+    <string name="result_pay_base">Pay (base): —</string>
+    <string name="result_overtime">Overtime pay: —</string>
+    <string name="result_total">Total pay (gross): —</string>
+    <string name="result_tax">Tax (18%): —</string>
 </resources>

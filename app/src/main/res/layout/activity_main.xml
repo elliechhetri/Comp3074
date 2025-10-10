@@ -10,24 +10,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:inputType="numberDecimal"
+            android:hint="@string/hint_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
         <EditText
             android:id="@+id/etHours"
             android:inputType="numberDecimal"
-            android:hint="Hours worked"
+            android:hint="@string/hint_hours"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
 
         <EditText
             android:id="@+id/etRate"
             android:inputType="numberDecimal"
-            android:hint="Hourly rate"
+            android:hint="@string/hint_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp" />
 
         <Button
             android:id="@+id/btnCalculate"
-            android:text="Calculate &amp; Save"
+            android:text="@string/btn_calculate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp" />
@@ -40,7 +58,7 @@
 
         <TextView
             android:id="@+id/tvPay"
-            android:text="Pay (base): —"
+            android:text="@string/result_pay_base"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,19 +66,19 @@
 
         <TextView
             android:id="@+id/tvOvertime"
-            android:text="Overtime pay: —"
+            android:text="@string/result_overtime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvTotal"
-            android:text="Total pay (gross): —"
+            android:text="@string/result_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tvTax"
-            android:text="Tax (18%): —"
+            android:text="@string/result_tax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
