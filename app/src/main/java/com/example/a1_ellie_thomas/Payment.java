@@ -2,6 +2,7 @@ package com.example.a1_ellie_thomas;
 
 import android.annotation.SuppressLint;
 
+// Payment object and it's functions for calculations and output
 public class Payment {
     private String name;
     private double hoursWorked;
