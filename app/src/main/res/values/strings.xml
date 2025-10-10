@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">COMP 3074 A1_Ellie_Thomas</string>
+    <string name="app_name">COMP3074 A1_Ellie_Thomas</string>
     <string name="hint_name">Employee name</string>
     <string name="hint_hours">Number of Hours Worked</string>
     <string name="hint_rate">Hourly rate</string>

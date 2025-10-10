@@ -21,7 +21,7 @@
 
         <EditText
             android:id="@+id/etName"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:hint="@string/hint_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
