@@ -55,7 +55,8 @@ public class Payment {
     @SuppressLint("DefaultLocale")
     @Override
     public String toString() {
-        return String.format("%s:\nHOURS:\t\t%.2f\nRATE:\t\t\t$%.2f/h\nINCOME:\t\t$%.2f",
-                name, hoursWorked, hourlyRate, calculateIncome());
+        String breakline= "---------------------------------------";
+        return String.format("%s:\nHOURS:\t\t%.2f\nRATE:\t\t\t$%.2f/h\nINCOME:\t\t$%.2f\n%s",
+                name, hoursWorked, hourlyRate, calculateIncome(), breakline);
     }
 }
