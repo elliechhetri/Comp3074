@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         etRate.setFilters(new android.text.InputFilter[]{ new TwoDecimalDigitsInputFilter() });
 
         btnCalculate.setOnClickListener(v -> calculatePay());
+
+        //android.widget.Toast.makeText(this, "Payment saved", android.widget.Toast.LENGTH_SHORT).show();
     }
 
     private void calculatePay() {
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         repository.addPayment(payment);
 
         tvResult.setText(payment.toString());
+
+        android.widget.Toast.makeText(this, "Payment saved", android.widget.Toast.LENGTH_SHORT).show();
     }
 
     @Override
