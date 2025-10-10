@@ -48,7 +48,10 @@
             android:text="@string/btn_calculate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_primary"
+            android:textAllCaps="false"
+            />
 
         <View
             android:layout_width="match_parent"
